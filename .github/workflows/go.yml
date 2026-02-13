@@ -28,5 +28,5 @@ jobs:
 
       - name: Test
         working-directory: 3983-integracao-continua-projeto_inicial
-        run: go test -v ./...
+        run: docker compose up -d app && docker compose exec -T app go test -v ./...
 
